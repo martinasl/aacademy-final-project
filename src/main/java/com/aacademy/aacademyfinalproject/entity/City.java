@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.Set;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -22,4 +23,8 @@ public class City {
     @NotNull
     @Column(nullable = false, unique = true)
     private String name;
+
+    @ManyToMany
+    @JoinTable( name = "cities_universities", joinColumns = @JoinColumn(name = "city_id"), inverseJoinColumns = @JoinColumn(name = "university_id"))
+    private Set<University> universities;
 }
