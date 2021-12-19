@@ -7,14 +7,14 @@ import org.springframework.stereotype.Component;
 @Component
 public class UniversityConverter {
 
-    public UniversityDto toUniversityDto(University university){
+    public UniversityDto toUniversityDto(University university) {
         return UniversityDto.builder()
                 .id(university.getId())
                 .name(university.getName())
                 .build();
     }
 
-    public University toUniversity(UniversityDto universityDto){
+    public University toUniversity(UniversityDto universityDto) {
         return University.builder()
                 .id(universityDto.getId())
                 .name(universityDto.getName())

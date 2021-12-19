@@ -25,6 +25,6 @@ public class City {
     private String name;
 
     @ManyToMany
-    @JoinTable( name = "cities_universities", joinColumns = @JoinColumn(name = "city_id"), inverseJoinColumns = @JoinColumn(name = "university_id"))
+    @JoinTable(name = "cities_universities", joinColumns = @JoinColumn(name = "city_id"), inverseJoinColumns = @JoinColumn(name = "university_id"))
     private Set<University> universities;
 }

@@ -24,16 +24,16 @@ public class CityServiceImpl implements CityService {
 
     @Override
     public City save(City city) {
-       Set<University> universities = new HashSet<>();
-       for(University university: city.getUniversities()) {
-           University foundUniversity = universityService.findById(university.getId());
-           universities.add(foundUniversity);
-       }
+        Set<University> universities = new HashSet<>();
+        for (University university : city.getUniversities()) {
+            University foundUniversity = universityService.findById(university.getId());
+            universities.add(foundUniversity);
+        }
 
-           return cityRepository.save(City.builder()
-           .name(city.getName())
-           .universities(universities)
-           .build());
+        return cityRepository.save(City.builder()
+                .name(city.getName())
+                .universities(universities)
+                .build());
 
     }
 

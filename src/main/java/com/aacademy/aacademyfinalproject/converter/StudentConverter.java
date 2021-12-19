@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class StudentConverter {
 
-    public StudentDto studentDto(Student student){
+    public StudentDto toStudentDto(Student student) {
         return StudentDto.builder()
                 .id(student.getId())
                 .name(student.getName())
@@ -15,7 +15,7 @@ public class StudentConverter {
                 .build();
     }
 
-    public Student toStudent(StudentDto studentDto){
+    public Student toStudent(StudentDto studentDto) {
         return Student.builder()
                 .id(studentDto.getId())
                 .name(studentDto.getName())

@@ -11,6 +11,6 @@ public interface CityService {
 
     Set<City> findAll();
 
-    City update (City city, Long id);
+    City update(City city, Long id);
 
 }

@@ -5,10 +5,12 @@ import com.aacademy.aacademyfinalproject.exception.ResourceNotFoundException;
 import com.aacademy.aacademyfinalproject.repository.UniversityRepository;
 import com.aacademy.aacademyfinalproject.service.UniversityService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
 import java.util.Set;
 
+@Service
 public class UniversityServiceImpl implements UniversityService {
 
     private final UniversityRepository universityRepository;

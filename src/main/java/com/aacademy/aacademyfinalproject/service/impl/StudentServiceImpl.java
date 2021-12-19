@@ -7,10 +7,12 @@ import com.aacademy.aacademyfinalproject.repository.StudentRepository;
 import com.aacademy.aacademyfinalproject.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
 import java.util.Set;
 
+@Service
 public class StudentServiceImpl implements StudentService {
 
     private final StudentRepository studentRepository;
@@ -42,5 +44,6 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public Set<Student> findAll() {
-        return new HashSet<>(studentRepository.findAll());    }
+        return new HashSet<>(studentRepository.findAll());
+    }
 }
